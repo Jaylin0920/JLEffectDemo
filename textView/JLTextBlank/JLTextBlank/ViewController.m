@@ -27,10 +27,10 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     if (textField == self.bankCardTextField) {
-        return [JLTextFieldUtil formatBankCard_addBlankWithtextField:textField shouldChangeCharactersInRange:range replacementString:string];
+        return [JLTextFieldUtil blankFormat_phoneWithtextField:textField shouldChangeCharactersInRange:range replacementString:string];
     }
     if (textField == self.phoneTextField) {
-        return [JLTextFieldUtil formatPhone_addBlankWithtextField:textField shouldChangeCharactersInRange:range replacementString:string];
+        return [JLTextFieldUtil blankFormat_bankCardWithtextField:textField shouldChangeCharactersInRange:range replacementString:string];
     }
     return YES;
 }

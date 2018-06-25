@@ -10,39 +10,36 @@
 
 @implementation JLTextFieldUtil
 
-/**
- 金钱输入 合法性检验
- 
- 规则：只能是0-9数字，最多输入9位，最多两位小数，小数点后不能在出现小数点
- （0:空格键  46:"."   48:"0"   57:"9"）
- */
-+ (BOOL)validateAmountWithTextField:(UITextField *)textField range:(NSRange )range replacementString:(NSString *)string {
-    // 即将输入的下一个字符
+- (BOOL)validateAmountWithTextField:(UITextField *)textField range:(NSRange )range replacementString:(NSString *)string {
     NSString * toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    const char * ch=[string cStringUsingEncoding:NSASCIIStringEncoding];
-    
-    /** 是否可输入 */
-    if (*ch==0)return YES;
-    if ((textField.text.length==1) && [textField.text isEqualToString:@"0"]){// 首字符0，后续只能输入 “.”
+    // 只可以输入：“.”、0-9的数字
+    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789.\b"];
+    if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
+        return NO;
+    }
+    const char *ch = [string cStringUsingEncoding:NSASCIIStringEncoding];
+    // 首字符0，后续只能输入 “.”
+    if ((textField.text.length==1) && [textField.text isEqualToString:@"0"]){
         if ([string isEqualToString:@"."]) return YES;
         else return NO;
     }
-    if (toBeString.length>9) return NO; //大于9位数
-    if((*ch != 46) && (*ch<48 || *ch>57)) return NO; // 只可以输入：“.”、0-9的数字
-    if([textField.text rangeOfString:@"."].length==1){ // 有了小数点
+    // 最多输入9位
+    if (toBeString.length>9) return NO;
+    // 有了小数点
+    if([textField.text rangeOfString:@"."].length==1) {
         NSUInteger length=[textField.text rangeOfString:@"."].location;
-        // 小数点后面两位小数 且不能再是小数点
+        // 小数点后面，只能有两位小数
+        // 小数点后面，不能再出现小数点
         if([[textField.text substringFromIndex:length] length]>2 || *ch ==46) return NO;
     }
     return YES;
 }
 
-
-+ (BOOL)formatPhone_addBlankWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
++ (BOOL)blankFormat_phoneWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     return [self jl_addBlankWithtextField:textField shouldChangeCharactersInRange:range replacementString:string isPhone:YES];
 }
 
-+ (BOOL)formatBankCard_addBlankWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
++ (BOOL)blankFormat_bankCardWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     return [self jl_addBlankWithtextField:textField shouldChangeCharactersInRange:range replacementString:string isPhone:NO];
 }
 
@@ -84,6 +81,11 @@
     return NO;
 }
 
+/*
+ textField手动输入时，会触发notification、UIControlEventEditingChanged;
+ textField.text=@""时，会触发kvo
+ 如碰到自定义键盘，空格格式化无效，可尝试调用以下方法
+ */
 + (void)jl_addValueChangeWithTextField:(UITextField *)textField {
     [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:nil];
     [textField sendActionsForControlEvents:UIControlEventEditingChanged];

@@ -10,11 +10,11 @@
 
 @implementation JLTextFieldUtil
 
-+ (BOOL)formatPhone_addBlankWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
++ (BOOL)blankFormat_phoneWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     return [self jl_addBlankWithtextField:textField shouldChangeCharactersInRange:range replacementString:string isPhone:YES];
 }
 
-+ (BOOL)formatBankCard_addBlankWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
++ (BOOL)blankFormat_bankCardWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     return [self jl_addBlankWithtextField:textField shouldChangeCharactersInRange:range replacementString:string isPhone:NO];
 }
 
@@ -56,8 +56,11 @@
     return NO;
 }
 
-// 有些自定义键盘，
-// textField
+/*
+ textField手动输入时，会触发notification、UIControlEventEditingChanged;
+ textField.text=@""时，会触发kvo
+ 如碰到自定义键盘，空格格式化无效，可尝试调用以下方法
+ */
 + (void)jl_addValueChangeWithTextField:(UITextField *)textField {
     [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:nil];
     [textField sendActionsForControlEvents:UIControlEventEditingChanged];
