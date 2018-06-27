@@ -39,7 +39,7 @@
 1.只能出现"0-9"数字和"."
 2.最多输入9位
 3.当首字符为“0”，第二字符只能输入“.”
-4.最多两位小数
+4.小数点后两位小数
 5.小数点后不能在出现小数点</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
