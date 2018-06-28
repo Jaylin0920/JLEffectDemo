@@ -22,32 +22,33 @@
 #pragma mark - private method
 
 + (BOOL)jl_addBlankWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string isPhone:(BOOL)isPhone {
-    NSString *text = [textField text];
+    NSString * toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
     NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789\b"];
-    string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-    if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
+    toBeString = [toBeString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if ([toBeString rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
         return NO;
     }
-    text = [text stringByReplacingCharactersInRange:range withString:string];
-    text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
+
     if (isPhone) {
         // 如果是电话号码格式化，需要添加这三行代码
-        NSMutableString *temString = [NSMutableString stringWithString:text];
+        NSMutableString *temString = [NSMutableString stringWithString:toBeString];
         [temString insertString:@" " atIndex:0];
-        text = temString;
+        toBeString = [temString copy];
     }
     
     NSString *newString = @"";
-    while (text.length > 0) {
-        NSString *subString = [text substringToIndex:MIN(text.length, 4)];
+    NSInteger blankInterval = 4;
+    while (toBeString.length > 0) {
+        NSString *subString = [toBeString substringToIndex:MIN(toBeString.length, blankInterval)];
         newString = [newString stringByAppendingString:subString];
-        if (subString.length == 4) {
+        if (subString.length == blankInterval) {
             newString = [newString stringByAppendingString:@" "];
         }
-        text = [text substringFromIndex:MIN(text.length, 4)];
+        toBeString = [toBeString substringFromIndex:MIN(toBeString.length, blankInterval)];
     }
     newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];
+    
     NSInteger limitCount = isPhone? 13:23;
     if (newString.length >= limitCount) {
         newString = [newString substringToIndex:limitCount];

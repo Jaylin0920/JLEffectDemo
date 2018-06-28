@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F64EBE6620E4D50200BD53C2 /* NSString+JLFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F64EBE6520E4D50200BD53C2 /* NSString+JLFormat.m */; };
 		F6788D8420DFBC9B00ECB5BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6788D8320DFBC9B00ECB5BE /* AppDelegate.m */; };
 		F6788D8720DFBC9B00ECB5BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6788D8620DFBC9B00ECB5BE /* ViewController.m */; };
 		F6788D8A20DFBC9B00ECB5BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6788D8820DFBC9B00ECB5BE /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F64EBE6420E4D50200BD53C2 /* NSString+JLFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+JLFormat.h"; sourceTree = "<group>"; };
+		F64EBE6520E4D50200BD53C2 /* NSString+JLFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+JLFormat.m"; sourceTree = "<group>"; };
 		F6788D7F20DFBC9B00ECB5BE /* JLKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6788D8220DFBC9B00ECB5BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F6788D8320DFBC9B00ECB5BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,6 +69,8 @@
 				F6788D8620DFBC9B00ECB5BE /* ViewController.m */,
 				F6788D9920DFBCD900ECB5BE /* JLTextFieldUtil.h */,
 				F6788D9A20DFBCD900ECB5BE /* JLTextFieldUtil.m */,
+				F64EBE6420E4D50200BD53C2 /* NSString+JLFormat.h */,
+				F64EBE6520E4D50200BD53C2 /* NSString+JLFormat.m */,
 				F6788D9020DFBC9B00ECB5BE /* Info.plist */,
 			);
 			path = JLKit;
@@ -158,6 +163,7 @@
 				F6788D8720DFBC9B00ECB5BE /* ViewController.m in Sources */,
 				F6788D9B20DFBCD900ECB5BE /* JLTextFieldUtil.m in Sources */,
 				F6788D9220DFBC9B00ECB5BE /* main.m in Sources */,
+				F64EBE6620E4D50200BD53C2 /* NSString+JLFormat.m in Sources */,
 				F6788D8420DFBC9B00ECB5BE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 339PXJLVAF;
 				INFOPLIST_FILE = JLKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dream.JLKit;
@@ -306,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 339PXJLVAF;
 				INFOPLIST_FILE = JLKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dream.JLKit;

@@ -10,7 +10,6 @@
 
 @implementation JLTextFieldUtil
 
-
 + (BOOL)validateAmountWithTextField:(UITextField *)textField range:(NSRange )range replacementString:(NSString *)string {
     NSString * toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
@@ -52,37 +51,12 @@
         // 小数点后面，只能有两位小数
         NSInteger limitDecimalsCount = 2;
         if ([toBeString substringFromIndex:location].length-1 > limitDecimalsCount) {
-            NSInteger limtLength = location+1+limitDecimalsCount; //小数点前面长度+小数点长度+小数点后面
-            toBeString = [toBeString substringToIndex:limtLength];
+            NSInteger limitLength = location+1+limitDecimalsCount; //小数点前面长度+小数点长度+小数点后面
+            toBeString = [toBeString substringToIndex:limitLength];
         }
     }
     [textField setText:toBeString];
     return NO;
-}
-
-+ (BOOL)validateAmount1WithTextField:(UITextField *)textField range:(NSRange )range replacementString:(NSString *)string {
-    NSString * toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    // 只可以输入：“.”、0-9的数字
-    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789.\b"];
-    if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
-        return NO;
-    }
-    const char *ch = [string cStringUsingEncoding:NSASCIIStringEncoding];
-    // 首字符0，后续只能输入 “.”
-    if ((textField.text.length==1) && [textField.text isEqualToString:@"0"]){
-        if ([string isEqualToString:@"."]) return YES;
-        else return NO;
-    }
-    // 最多输入9位
-    if (toBeString.length>9) return NO;
-    // 有了小数点
-    if([textField.text rangeOfString:@"."].length==1) {
-        NSUInteger length=[textField.text rangeOfString:@"."].location;
-        // 小数点后面，只能有两位小数
-        // 小数点后面，不能再出现小数点
-        if([[textField.text substringFromIndex:length] length]>2 || *ch ==46) return NO;
-    }
-    return YES;
 }
 
 + (BOOL)blankFormat_phoneWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -97,32 +71,33 @@
 #pragma mark - private method
 
 + (BOOL)jl_addBlankWithtextField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string isPhone:(BOOL)isPhone {
-    NSString *text = [textField text];
+    NSString * toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
     NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789\b"];
-    string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-    if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
+    toBeString = [toBeString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if ([toBeString rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
         return NO;
     }
-    text = [text stringByReplacingCharactersInRange:range withString:string];
-    text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     if (isPhone) {
         // 如果是电话号码格式化，需要添加这三行代码
-        NSMutableString *temString = [NSMutableString stringWithString:text];
+        NSMutableString *temString = [NSMutableString stringWithString:toBeString];
         [temString insertString:@" " atIndex:0];
-        text = temString;
+        toBeString = [temString copy];
     }
     
     NSString *newString = @"";
-    while (text.length > 0) {
-        NSString *subString = [text substringToIndex:MIN(text.length, 4)];
+    NSInteger blankInterval = 4;
+    while (toBeString.length > 0) {
+        NSString *subString = [toBeString substringToIndex:MIN(toBeString.length, blankInterval)];
         newString = [newString stringByAppendingString:subString];
-        if (subString.length == 4) {
+        if (subString.length == blankInterval) {
             newString = [newString stringByAppendingString:@" "];
         }
-        text = [text substringFromIndex:MIN(text.length, 4)];
+        toBeString = [toBeString substringFromIndex:MIN(toBeString.length, blankInterval)];
     }
     newString = [newString stringByTrimmingCharactersInSet:[characterSet invertedSet]];
+    
     NSInteger limitCount = isPhone? 13:23;
     if (newString.length >= limitCount) {
         newString = [newString substringToIndex:limitCount];

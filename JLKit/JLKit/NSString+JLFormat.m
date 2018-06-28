@@ -1,41 +1,20 @@
 //
-//  ViewController.m
-//  JLInputMoney
+//  NSString+JLFormat.m
+//  JLKit
 //
-//  Created by JiBaoBao on 2018/6/24.
+//  Created by JiBaoBao on 2018/6/28.
 //  Copyright © 2018年 JiBaoBao. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "NSString+JLFormat.h"
 
-@interface ViewController () <UITextFieldDelegate>
+@implementation NSString (JLFormat)
 
-@property (weak, nonatomic) IBOutlet UITextField *textField;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.textField.delegate = self;
-}
-
--(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    return [self validateAmountWithTextField:textField range:range replacementString:string];
-}
-
-/**
- 金钱输入 合法性检验
- 规则：只能出现"0-9"数字和"."； 最多输入9位； 当首字符为“0”，第二字符只能输入“.”； 最多两位小数； 小数点后不能在出现小数点
- */
-- (BOOL)validateAmountWithTextField:(UITextField *)textField range:(NSRange )range replacementString:(NSString *)string {
-    NSString * toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-
++ (NSString *)validateAmountWithToBeString:(NSString *)toBeString replacementString:(NSString *)string {
     // 只能出现"0-9"数字和"."
     NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789.\b"];
     if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
-        return NO;
+        return @"";
     }
     
     // 最多输入9位
@@ -43,7 +22,7 @@
     if (toBeString.length > limitCount) {
         toBeString = [toBeString substringToIndex:limitCount];
     }
-
+    
     // 当首字符为“0”，第二字符只能输入“.”
     if (toBeString.length >= 2){
         // 首字符为“0”
@@ -55,7 +34,7 @@
             }
         }
     }
-
+    
     // 有了小数点
     if([toBeString rangeOfString:@"."].length == 1) {
         NSUInteger location = [toBeString rangeOfString:@"."].location;
@@ -74,8 +53,8 @@
             toBeString = [toBeString substringToIndex:limitLength];
         }
     }
-    [textField setText:toBeString];
-    return NO;
+    return toBeString;
 }
+
 
 @end
