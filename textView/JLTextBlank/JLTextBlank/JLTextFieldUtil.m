@@ -26,7 +26,7 @@
     
     NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789\b"];
     toBeString = [toBeString stringByReplacingOccurrencesOfString:@" " withString:@""];
-    if ([toBeString rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
+    if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
         return NO;
     }
 
