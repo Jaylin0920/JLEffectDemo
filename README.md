@@ -2,7 +2,9 @@
 
 
 
+JLHole 坑
 
+webview截图：uiwebview截图无问题，wkwebview截图，UIGraphicsGetCurrentContext()的返回结果是nil
 
 
 
