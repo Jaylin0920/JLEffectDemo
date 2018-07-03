@@ -8,6 +8,12 @@ webview截图：uiwebview截图无问题，wkwebview截图，UIGraphicsGetCurren
 
 
 
+### UIImage
+
+截屏
+
+
+
 ### TextView
 
 JLInputMoney - 输入金额的合法性校验
