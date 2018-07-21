@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F648EECE2102FEA200045DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F648EECD2102FEA200045DB8 /* AppDelegate.m */; };
+		F648EED12102FEA200045DB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F648EED02102FEA200045DB8 /* ViewController.m */; };
+		F648EED42102FEA200045DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F648EED22102FEA200045DB8 /* Main.storyboard */; };
+		F648EED62102FEA200045DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F648EED52102FEA200045DB8 /* Assets.xcassets */; };
+		F648EED92102FEA200045DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F648EED72102FEA200045DB8 /* LaunchScreen.storyboard */; };
+		F648EEDC2102FEA200045DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F648EEDB2102FEA200045DB8 /* main.m */; };
+		F648EEE52102FF4100045DB8 /* JLAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = F648EEE42102FF4100045DB8 /* JLAuthorization.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F648EEC92102FEA200045DB8 /* JLCameraAuthorizationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLCameraAuthorizationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F648EECC2102FEA200045DB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F648EECD2102FEA200045DB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F648EECF2102FEA200045DB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F648EED02102FEA200045DB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F648EED32102FEA200045DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F648EED52102FEA200045DB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F648EED82102FEA200045DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F648EEDA2102FEA200045DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F648EEDB2102FEA200045DB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F648EEE32102FF4100045DB8 /* JLAuthorization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLAuthorization.h; sourceTree = "<group>"; };
+		F648EEE42102FF4100045DB8 /* JLAuthorization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLAuthorization.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F648EEC62102FEA200045DB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F648EEC02102FEA200045DB8 = {
+			isa = PBXGroup;
+			children = (
+				F648EECB2102FEA200045DB8 /* JLCameraAuthorizationDemo */,
+				F648EECA2102FEA200045DB8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F648EECA2102FEA200045DB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F648EEC92102FEA200045DB8 /* JLCameraAuthorizationDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F648EECB2102FEA200045DB8 /* JLCameraAuthorizationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F648EEE621030BE700045DB8 /* JLAuthorization */,
+				F648EEE22102FEA900045DB8 /* Application */,
+				F648EECF2102FEA200045DB8 /* ViewController.h */,
+				F648EED02102FEA200045DB8 /* ViewController.m */,
+				F648EEDA2102FEA200045DB8 /* Info.plist */,
+			);
+			path = JLCameraAuthorizationDemo;
+			sourceTree = "<group>";
+		};
+		F648EEE22102FEA900045DB8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F648EECC2102FEA200045DB8 /* AppDelegate.h */,
+				F648EECD2102FEA200045DB8 /* AppDelegate.m */,
+				F648EED22102FEA200045DB8 /* Main.storyboard */,
+				F648EED52102FEA200045DB8 /* Assets.xcassets */,
+				F648EED72102FEA200045DB8 /* LaunchScreen.storyboard */,
+				F648EEDB2102FEA200045DB8 /* main.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F648EEE621030BE700045DB8 /* JLAuthorization */ = {
+			isa = PBXGroup;
+			children = (
+				F648EEE32102FF4100045DB8 /* JLAuthorization.h */,
+				F648EEE42102FF4100045DB8 /* JLAuthorization.m */,
+			);
+			path = JLAuthorization;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F648EEC82102FEA200045DB8 /* JLCameraAuthorizationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F648EEDF2102FEA200045DB8 /* Build configuration list for PBXNativeTarget "JLCameraAuthorizationDemo" */;
+			buildPhases = (
+				F648EEC52102FEA200045DB8 /* Sources */,
+				F648EEC62102FEA200045DB8 /* Frameworks */,
+				F648EEC72102FEA200045DB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JLCameraAuthorizationDemo;
+			productName = JLCameraAuthorizationDemo;
+			productReference = F648EEC92102FEA200045DB8 /* JLCameraAuthorizationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F648EEC12102FEA200045DB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = JiBaoBao;
+				TargetAttributes = {
+					F648EEC82102FEA200045DB8 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F648EEC42102FEA200045DB8 /* Build configuration list for PBXProject "JLCameraAuthorizationDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F648EEC02102FEA200045DB8;
+			productRefGroup = F648EECA2102FEA200045DB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F648EEC82102FEA200045DB8 /* JLCameraAuthorizationDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F648EEC72102FEA200045DB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F648EED92102FEA200045DB8 /* LaunchScreen.storyboard in Resources */,
+				F648EED62102FEA200045DB8 /* Assets.xcassets in Resources */,
+				F648EED42102FEA200045DB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F648EEC52102FEA200045DB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F648EED12102FEA200045DB8 /* ViewController.m in Sources */,
+				F648EEDC2102FEA200045DB8 /* main.m in Sources */,
+				F648EECE2102FEA200045DB8 /* AppDelegate.m in Sources */,
+				F648EEE52102FF4100045DB8 /* JLAuthorization.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F648EED22102FEA200045DB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F648EED32102FEA200045DB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F648EED72102FEA200045DB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F648EED82102FEA200045DB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F648EEDD2102FEA200045DB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F648EEDE2102FEA200045DB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F648EEE02102FEA200045DB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 339PXJLVAF;
+				INFOPLIST_FILE = JLCameraAuthorizationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = belief.JLCameraAuthorizationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F648EEE12102FEA200045DB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 339PXJLVAF;
+				INFOPLIST_FILE = JLCameraAuthorizationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = belief.JLCameraAuthorizationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F648EEC42102FEA200045DB8 /* Build configuration list for PBXProject "JLCameraAuthorizationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F648EEDD2102FEA200045DB8 /* Debug */,
+				F648EEDE2102FEA200045DB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F648EEDF2102FEA200045DB8 /* Build configuration list for PBXNativeTarget "JLCameraAuthorizationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F648EEE02102FEA200045DB8 /* Debug */,
+				F648EEE12102FEA200045DB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F648EEC12102FEA200045DB8 /* Project object */;
+}
