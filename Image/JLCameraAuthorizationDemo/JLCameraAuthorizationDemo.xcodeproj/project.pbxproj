@@ -29,6 +29,7 @@
 		F648EEDB2102FEA200045DB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F648EEE32102FF4100045DB8 /* JLAuthorization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLAuthorization.h; sourceTree = "<group>"; };
 		F648EEE42102FF4100045DB8 /* JLAuthorization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLAuthorization.m; sourceTree = "<group>"; };
+		F648EEE721032B8400045DB8 /* JLCameraAuthorization.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = JLCameraAuthorization.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +46,7 @@
 		F648EEC02102FEA200045DB8 = {
 			isa = PBXGroup;
 			children = (
+				F648EEE721032B8400045DB8 /* JLCameraAuthorization.md */,
 				F648EECB2102FEA200045DB8 /* JLCameraAuthorizationDemo */,
 				F648EECA2102FEA200045DB8 /* Products */,
 			);
