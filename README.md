@@ -2,6 +2,20 @@
 
 
 
+Net
+
+网络封装
+
+简单网络封装，不依赖于afn
+
+基于AFN的二次封装
+
+基于YTK的二次封装
+
+
+
+
+
 JLHole 坑
 
 webview截图：uiwebview截图无问题，wkwebview截图，UIGraphicsGetCurrentContext()的返回结果是nil
