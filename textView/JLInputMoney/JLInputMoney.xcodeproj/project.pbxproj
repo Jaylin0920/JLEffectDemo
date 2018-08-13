@@ -13,6 +13,7 @@
 		F6788D4620DFAD2700ECB5BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6788D4520DFAD2700ECB5BE /* Assets.xcassets */; };
 		F6788D4920DFAD2700ECB5BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6788D4720DFAD2700ECB5BE /* LaunchScreen.storyboard */; };
 		F6788D4C20DFAD2700ECB5BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6788D4B20DFAD2700ECB5BE /* main.m */; };
+		F6C4852C2121D8280079693D /* JLTextFieldUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C4852A2121D8280079693D /* JLTextFieldUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F6788D4820DFAD2700ECB5BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6788D4A20DFAD2700ECB5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6788D4B20DFAD2700ECB5BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6C4852A2121D8280079693D /* JLTextFieldUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTextFieldUtil.m; sourceTree = "<group>"; };
+		F6C4852B2121D8280079693D /* JLTextFieldUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTextFieldUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 				F6788D5220DFAD2B00ECB5BE /* Application */,
 				F6788D3F20DFAD2700ECB5BE /* ViewController.h */,
 				F6788D4020DFAD2700ECB5BE /* ViewController.m */,
+				F6C4852B2121D8280079693D /* JLTextFieldUtil.h */,
+				F6C4852A2121D8280079693D /* JLTextFieldUtil.m */,
 				F6788D4A20DFAD2700ECB5BE /* Info.plist */,
 			);
 			path = JLInputMoney;
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6788D4120DFAD2700ECB5BE /* ViewController.m in Sources */,
+				F6C4852C2121D8280079693D /* JLTextFieldUtil.m in Sources */,
 				F6788D4C20DFAD2700ECB5BE /* main.m in Sources */,
 				F6788D3E20DFAD2700ECB5BE /* AppDelegate.m in Sources */,
 			);
@@ -291,7 +297,7 @@
 				INFOPLIST_FILE = JLInputMoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dream.JLInputMoney;
+				PRODUCT_BUNDLE_IDENTIFIER = belief.JLInputMoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,7 +312,7 @@
 				INFOPLIST_FILE = JLInputMoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dream.JLInputMoney;
+				PRODUCT_BUNDLE_IDENTIFIER = belief.JLInputMoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

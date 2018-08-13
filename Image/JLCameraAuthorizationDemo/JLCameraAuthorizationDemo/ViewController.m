@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "JLAuthorization.h"
 
-@interface ViewController ()<UIAlertViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ViewController () <UIAlertViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end
 
