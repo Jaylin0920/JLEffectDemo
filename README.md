@@ -16,7 +16,7 @@ Net
 
 JLHole 坑
 
-webview截图：uiwebview截图无问题，wkwebview截图，UIGraphicsGetCurrentContext()的返回结果是nil
+❤️webview截图：uiwebview截图无问题，wkwebview截图，UIGraphicsGetCurrentContext()的返回结果是nil
 
 
 
@@ -24,20 +24,22 @@ webview截图：uiwebview截图无问题，wkwebview截图，UIGraphicsGetCurren
 
 ### Image
 
-（+）截屏
+❤️（+）截屏：截取当前屏幕、view组合截屏
 
-JLCameraAuthorizationDemo - 相机相册使用权限
+👌JLCameraAuthorizationDemo - 相机相册使用权限
 
 
 
 ### TextView
 
-JLInputMoney - 输入金额的合法性校验
+👌JLInputMoney - 输入金额的合法性校验
 
-JLTextBlank - 银行卡空格格式化，手机号空格格式化
+👌JLTextBlank - 银行卡空格格式化，手机号空格格式化
 
 
 
 ### ScrollView
 
 （+）嵌套布局
+
+联动布局
