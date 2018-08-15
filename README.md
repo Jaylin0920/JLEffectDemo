@@ -24,7 +24,7 @@ JLHole 坑
 
 ### Image
 
-❤️（+）截屏：截取当前屏幕、view组合截屏
+❤️（+）截屏：截取当前屏幕、view组合截屏         JLScreenShot - 截屏
 
 👌JLCameraAuthorization - 相机相册使用权限
 
