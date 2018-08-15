@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 相机相册权限
+ */
 @interface JLAuthorization : NSObject
 
 /**
@@ -16,7 +19,7 @@
 + (void)jumptoSystemSetting;
 
 /**
- 检测相机的方法
+ 检测相机的访问权限
  @param permissionGranted 相机授权成功执行的方法
  @param noPermission 相机授权失败或者未授权执行的方法
  */

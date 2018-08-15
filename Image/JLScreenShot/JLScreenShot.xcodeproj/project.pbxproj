@@ -13,7 +13,7 @@
 		F6770E5A2123CDDB001C7E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6770E592123CDDB001C7E6C /* Assets.xcassets */; };
 		F6770E5D2123CDDB001C7E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6770E5B2123CDDB001C7E6C /* LaunchScreen.storyboard */; };
 		F6770E602123CDDB001C7E6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6770E5F2123CDDB001C7E6C /* main.m */; };
-		F6770E692123D32A001C7E6C /* UIView+JLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F6770E682123D32A001C7E6C /* UIView+JLAdd.m */; };
+		F6770E6D2124091C001C7E6C /* JLScreenCaptureUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F6770E6C2124091C001C7E6C /* JLScreenCaptureUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		F6770E5C2123CDDB001C7E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6770E5E2123CDDB001C7E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6770E5F2123CDDB001C7E6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F6770E672123D32A001C7E6C /* UIView+JLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JLAdd.h"; sourceTree = "<group>"; };
-		F6770E682123D32A001C7E6C /* UIView+JLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JLAdd.m"; sourceTree = "<group>"; };
 		F6770E6A2123EE68001C7E6C /* 截图.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "截图.md"; sourceTree = "<group>"; };
+		F6770E6B2124091C001C7E6C /* JLScreenCaptureUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLScreenCaptureUtil.h; sourceTree = "<group>"; };
+		F6770E6C2124091C001C7E6C /* JLScreenCaptureUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLScreenCaptureUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +66,8 @@
 				F6770E662123CDEF001C7E6C /* Application */,
 				F6770E532123CDDA001C7E6C /* ViewController.h */,
 				F6770E542123CDDB001C7E6C /* ViewController.m */,
-				F6770E672123D32A001C7E6C /* UIView+JLAdd.h */,
-				F6770E682123D32A001C7E6C /* UIView+JLAdd.m */,
+				F6770E6B2124091C001C7E6C /* JLScreenCaptureUtil.h */,
+				F6770E6C2124091C001C7E6C /* JLScreenCaptureUtil.m */,
 			);
 			path = JLScreenShot;
 			sourceTree = "<group>";
@@ -159,8 +159,8 @@
 			files = (
 				F6770E552123CDDB001C7E6C /* ViewController.m in Sources */,
 				F6770E602123CDDB001C7E6C /* main.m in Sources */,
-				F6770E692123D32A001C7E6C /* UIView+JLAdd.m in Sources */,
 				F6770E522123CDDA001C7E6C /* AppDelegate.m in Sources */,
+				F6770E6D2124091C001C7E6C /* JLScreenCaptureUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

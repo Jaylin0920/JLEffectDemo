@@ -27,7 +27,7 @@
 
 #pragma mark - 权限检查
 
-///  检测相机的方法
+// 检测相机的访问权限
 + (void)checkCameraAuthorizationGrand:(void (^)(void))permissionGranted withNoPermission:(void (^)(void))noPermission {
     //AVMediaTypeVideo:相机权限; AVMediaTypeAudio：麦克风权限
     AVAuthorizationStatus videoAuthStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
@@ -54,7 +54,7 @@
     }
 }
 
-/// 检测访问相册的权限
+// 检测访问相册的权限
 + (void)checkPhotoAlbumAuthorizationGrand:(void (^)(void))permissionGranted withNoPermission:(void (^)(void))noPermission {
     PHAuthorizationStatus photoAuthStatus = [PHPhotoLibrary authorizationStatus];
     switch (photoAuthStatus) {

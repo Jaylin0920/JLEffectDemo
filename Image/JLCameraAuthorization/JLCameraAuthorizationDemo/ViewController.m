@@ -19,6 +19,8 @@
     [super viewDidLoad];
 }
 
+#pragma mark - btn click
+
 // 点击了“打开相机”
 - (IBAction)cameraButtonClick:(UIButton *)sender {
     __weak typeof(self) wSelf = self;
@@ -70,9 +72,7 @@
 
 #pragma mark - event respond
 
-/**
- *  调用照相机
- */
+// 调用照相机
 - (void)openCamera {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -88,9 +88,7 @@
     }
 }
 
-/**
- *  打开相册
- */
+// 打开相册
 -(void)openPhotoLibrary {
     // 进入相册
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]){
