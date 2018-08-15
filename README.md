@@ -26,7 +26,7 @@ JLHole 坑
 
 ❤️（+）截屏：截取当前屏幕、view组合截屏
 
-👌JLCameraAuthorizationDemo - 相机相册使用权限
+👌JLCameraAuthorization - 相机相册使用权限
 
 
 
