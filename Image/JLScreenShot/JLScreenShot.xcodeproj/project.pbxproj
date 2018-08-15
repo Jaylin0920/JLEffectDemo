@@ -14,6 +14,7 @@
 		F6770E5D2123CDDB001C7E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6770E5B2123CDDB001C7E6C /* LaunchScreen.storyboard */; };
 		F6770E602123CDDB001C7E6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6770E5F2123CDDB001C7E6C /* main.m */; };
 		F6770E6D2124091C001C7E6C /* JLScreenCaptureUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F6770E6C2124091C001C7E6C /* JLScreenCaptureUtil.m */; };
+		F6770E7021243562001C7E6C /* WKWebView+TYSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = F6770E6E21243562001C7E6C /* WKWebView+TYSnapshot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		F6770E6A2123EE68001C7E6C /* 截图.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "截图.md"; sourceTree = "<group>"; };
 		F6770E6B2124091C001C7E6C /* JLScreenCaptureUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLScreenCaptureUtil.h; sourceTree = "<group>"; };
 		F6770E6C2124091C001C7E6C /* JLScreenCaptureUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLScreenCaptureUtil.m; sourceTree = "<group>"; };
+		F6770E6E21243562001C7E6C /* WKWebView+TYSnapshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+TYSnapshot.m"; sourceTree = "<group>"; };
+		F6770E6F21243562001C7E6C /* WKWebView+TYSnapshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+TYSnapshot.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F66077D521248853000C3D4C /* JLScreenCaptureUtil */ = {
+			isa = PBXGroup;
+			children = (
+				F6770E6B2124091C001C7E6C /* JLScreenCaptureUtil.h */,
+				F6770E6C2124091C001C7E6C /* JLScreenCaptureUtil.m */,
+			);
+			path = JLScreenCaptureUtil;
+			sourceTree = "<group>";
+		};
 		F6770E442123CDDA001C7E6C = {
 			isa = PBXGroup;
 			children = (
@@ -63,11 +75,12 @@
 		F6770E4F2123CDDA001C7E6C /* JLScreenShot */ = {
 			isa = PBXGroup;
 			children = (
+				F66077D521248853000C3D4C /* JLScreenCaptureUtil */,
 				F6770E662123CDEF001C7E6C /* Application */,
 				F6770E532123CDDA001C7E6C /* ViewController.h */,
 				F6770E542123CDDB001C7E6C /* ViewController.m */,
-				F6770E6B2124091C001C7E6C /* JLScreenCaptureUtil.h */,
-				F6770E6C2124091C001C7E6C /* JLScreenCaptureUtil.m */,
+				F6770E6F21243562001C7E6C /* WKWebView+TYSnapshot.h */,
+				F6770E6E21243562001C7E6C /* WKWebView+TYSnapshot.m */,
 			);
 			path = JLScreenShot;
 			sourceTree = "<group>";
@@ -161,6 +174,7 @@
 				F6770E602123CDDB001C7E6C /* main.m in Sources */,
 				F6770E522123CDDA001C7E6C /* AppDelegate.m in Sources */,
 				F6770E6D2124091C001C7E6C /* JLScreenCaptureUtil.m in Sources */,
+				F6770E7021243562001C7E6C /* WKWebView+TYSnapshot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

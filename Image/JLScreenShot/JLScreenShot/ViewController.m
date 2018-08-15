@@ -10,8 +10,14 @@
 #import <WebKit/WebKit.h>
 #import "JLScreenCaptureUtil.h"
 
+#import "WKWebView+TYSnapshot.h"
+#import <Photos/Photos.h>
+
 #define kScreenHeight                       [[UIScreen mainScreen] bounds].size.height
 #define kScreenWidth                        [[UIScreen mainScreen] bounds].size.width
+
+#define TICK   NSDate *startTime = [NSDate date];
+#define TOCK   NSLog(@"Time: %f", -[startTime timeIntervalSinceNow]);
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel; // 截图状态
@@ -28,6 +34,35 @@
     [super viewDidLoad];
     [self setupUI];
     [self loadWebRequest];
+    
+     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"截屏" style:UIBarButtonItemStylePlain target:self action:@selector(shareAction)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"删除图片" style:UIBarButtonItemStylePlain target:self action:@selector(deletePhoto)];
+
+}
+
+- (void)shareAction{
+    [self captureWKWebView:nil];
+}
+
+
+- (void)deletePhoto {
+    PHFetchResult *collectonResuts = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAny options:[PHFetchOptions new]] ;
+    [collectonResuts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        PHAssetCollection *assetCollection = obj;
+        if ([assetCollection.localizedTitle isEqualToString:@"Camera Roll"])  {
+            PHFetchResult *assetResult = [PHAsset fetchAssetsInAssetCollection:assetCollection options:[PHFetchOptions new]];
+            [assetResult enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+                    //获取相册的最后一张照片
+                    if (idx > [assetResult count] - 5) {
+                        [PHAssetChangeRequest deleteAssets:@[obj]];
+                    }
+                } completionHandler:^(BOOL success, NSError *error) {
+                    NSLog(@"Error: %@", error);
+                }];
+            }];
+        }
+    }];
 }
 
 #pragma mark - 截屏
@@ -57,7 +92,7 @@
     // contentView
     UIImageView *contentImageView = [[UIImageView alloc]init];
     contentImageView.frame = self.contentView.frame;
-    contentImageView.image = [JLScreenCaptureUtil captureNormalView: self.contentView];
+    contentImageView.image = [JLScreenCaptureUtil captureOpenGLView: self.contentView];
     [combineView addSubview:contentImageView];
     
     combineView.frame = CGRectMake(0, 0, kScreenWidth, navBarImageView.frame.size.height+contentImageView.frame.size.height);
@@ -68,17 +103,28 @@
 
 // scrollView截屏
 - (IBAction)captureScrollView:(UIButton *)sender {
-    [self saveImage:[JLScreenCaptureUtil captureLongView:self.scrollView]];
+    [self saveImage:[JLScreenCaptureUtil captureScrollView:self.scrollView]];
 }
 
 // uiWebview截屏
 - (IBAction)captureUIWebView:(UIButton *)sender {
-    [self saveImage:[JLScreenCaptureUtil captureWebView:self.uiWebView]];
+    [self saveImage:[JLScreenCaptureUtil captureUIWebView:self.uiWebView]];
 }
 
 // wkWebView截屏
 - (IBAction)captureWKWebView:(UIButton *)sender {
+//    TICK
+//    UIImage * image = [JLScreenCaptureUtil captureWKWebView:self.wkWebView];
+//    [self saveImage:image];
+//    TOCK
     
+    
+    TICK
+    __weak typeof(self) weakSelf = self;
+    [self.wkWebView screenSnapshot:^(UIImage *snapShotImage) {
+        [weakSelf saveImage:snapShotImage];
+        TOCK
+    }];
 }
 
 
@@ -111,19 +157,19 @@
 }
 
 - (void)loadWebRequest {
-    NSString *urlStr = @"http://finance.sina.cn/2018-08-14/detail-ihhtfwqq7086354.d.html?from=wap";
-    [self.wkWebView loadRequest:[self getRequestWithUrlStr:urlStr]];
-    [self.uiWebView loadRequest:[self getRequestWithUrlStr:urlStr]];
-}
-
-- (NSURLRequest *)getRequestWithUrlStr:(NSString *)urlStr{
-    if (urlStr) {
-        NSURL *url = [NSURL URLWithString:urlStr];
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-        [request setHTTPShouldHandleCookies:NO];
-        return [request copy];
-    }
-    return nil;
+    // uiwebview都有图像。加载速度慢，占用内存过大。
+    // wkwebview有的有图像，有的没图像。加载速度快，占用内存少
+    // uiwebview 和 wkwebview 内部加载和缓存机制不一样造成的
+    // uiwebview.scrollview，就可以拿到整个网页的内容，但是wkwebview.scrollview是没有内容的，截屏的做法，相当于拿到网页整体的高度，然后一个屏幕的高度为计量单位，遍历拼接视图，组合成为的wkwebview的截图，所以在处理截图的速度上，网页内容长，wkwebview耗时会非常的长，五六秒，甚至十几秒都可能。另外本项目的wkwebview的截图方法，如wkwebview只占用了部分屏幕，此方法下层会有视图闪现。因此，如果网页一定要截图的功能，建议使用uiwebview，而非wkwebview
+    
+    
+//    NSString *urlStr = @"https://www.meituan.com"; // 截屏有图像，截屏时间2s左右
+//    NSString *urlStr = @"http://money.sina.cn/h5chart/apptkchart.html?theme=black&direction=vertical&symbol=sz300104"; // 截屏有图像，截屏时间0.8s左右
+    NSString *urlStr = @"http://finance.sina.cn/2018-08-15/detail-ihhtfwqr2536607.d.html?from=wap"; // 截屏无图像，截屏时间4.5s
+    //    NSString *urlStr = @"https://sina.cn/index/feed?from=touch&Ver=20"; // 截屏一开始有图像，加载更多后，截屏就无图像了
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];//超时时间10秒
+    [self.wkWebView loadRequest:request];
+    [self.uiWebView loadRequest:request];
 }
 
 @end

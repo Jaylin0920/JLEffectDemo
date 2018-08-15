@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 /**
  截屏
@@ -21,29 +22,29 @@
 
 /**
  view截屏
- (该API仅可以在未使用layer和OpenGL渲染的视图上使用)
+ (该API仅可以在未使用layer和OpenGL渲染的视图上使用；包含导航栏的内容使用此方法)
  */
 + (UIImage *)captureNormalView:(UIView *)view;
 
 /**
- view截屏
- (针对有用过OpenGL渲染过的视图截图)
+ view-OpenGL截屏
+ (针对有用过OpenGL渲染过的视图截图；包含wkWebView的内容使用此方法)
  */
 + (UIImage *)captureOpenGLView:(UIView *)view;
 
 /**
- 长截图 tableView或者scrollView
+ scrollView截屏
  */
-+ (UIImage *)captureLongView:(UIScrollView *)scrollView;
++ (UIImage *)captureScrollView:(UIScrollView *)scrollView;
 
 /**
  uiWebview截屏
  */
-+ (UIImage *)captureWebView:(UIWebView *)webview;
++ (UIImage *)captureUIWebView:(UIWebView *)uiWebview;
 
 /**
  wkWebView截屏
  */
-
++ (UIImage *)captureWKWebView:(WKWebView *)wkWebview;
 
 @end
