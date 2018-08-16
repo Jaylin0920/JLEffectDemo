@@ -1,9 +1,25 @@
 # 相机、相册访问权限
 
 
+## 权限配置
+
+#####  info.plist设置
+
+```
+<!-- 相机 —> 
+<key>NSCameraUsageDescription</key>
+<string>App需要您的同意,才能访问相机</string>
+<!-- 相册 —> 
+<key>NSPhotoLibraryUsageDescription</key>
+<string>App需要您的同意,才能访问相册</string>
+```
+<br>
+
+
+
 ## 权限API
 
-相机权限
+#####  相机权限
 
 ```objective-c
 //相机、麦克风的授权状态
@@ -18,7 +34,7 @@ typedef NS_ENUM(NSInteger, AVAuthorizationStatus) {
 //AVMediaTypeAudio：麦克风权限
 ```
 
-相机权限
+#####  相机权限
 
 ```objective-c
 typedef NS_ENUM(NSInteger, PHAuthorizationStatus) {
@@ -31,25 +47,14 @@ typedef NS_ENUM(NSInteger, PHAuthorizationStatus) {
 <br>
 
 
-#####  info.plist设置
-
-```
-<!-- 相机 —> 
-<key>NSCameraUsageDescription</key>
-<string>App需要您的同意,才能访问相机</string>
-<!-- 相册 —> 
-<key>NSPhotoLibraryUsageDescription</key>
-<string>App需要您的同意,才能访问相册</string>
-```
-
 
 ## Alert文案内容
 
 > Tips：文案内容注意符合规范，否则审核会被拒
 
-首次访问（未询问过用户是否授权）
+##### 首次访问（未询问过用户是否授权）
 
-> alert为苹果系统控制。message可修改，title、buttonTitle不可修改
+alert为苹果系统控制。message可修改，title、buttonTitle不可修改
 
 ```
 “APP名称”想访问您的相机
@@ -57,9 +62,9 @@ App需要您的同意,才能访问相机 - jl此处文案可修改，但要符�
 不允许 vs 好
 ```
 
-非首次访问
+##### 非首次访问
 
-> alert为APP端控制。title、message、buttonTitle均可修改
+alert为APP端控制。title、message、buttonTitle均可修改
 
 ```
 “APP名称”想访问您的照片
