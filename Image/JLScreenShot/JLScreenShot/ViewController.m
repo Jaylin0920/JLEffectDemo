@@ -98,6 +98,7 @@
     // uiwebview都有图像。加载速度慢，占用内存过大。
     // wkwebview有的有图像，有的没图像。加载速度快，占用内存少
     // uiwebview.scrollview，就可以拿到整个网页的内容，但是wkwebview.scrollview是没有内容的，截屏的做法，相当于拿到网页整体的高度，然后一个屏幕的高度为计量单位，遍历拼接视图，组合成为的wkwebview的截图，所以在处理截图的速度上，网页内容长，wkwebview耗时会非常的长，五六秒，甚至十几秒都可能。另外本项目的wkwebview的截图方法，如wkwebview只占用了部分屏幕，此方法下层会有视图闪现。因此，如果网页一定要截图的功能，建议使用uiwebview，而非wkwebview
+    
     NSString *urlStr = @"https://www.meituan.com"; // 截屏有图像，截屏时间2s左右
 //    NSString *urlStr = @"http://money.sina.cn/h5chart/apptkchart.html?theme=black&direction=vertical&symbol=sz300104"; // 截屏有图像，截屏时间0.8s左右
 //    NSString *urlStr = @"http://finance.sina.cn/2018-08-15/detail-ihhtfwqr2536607.d.html?from=wap"; // 截屏无图像，截屏时间4.5s

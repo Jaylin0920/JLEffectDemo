@@ -33,7 +33,7 @@
 		F6770E5C2123CDDB001C7E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6770E5E2123CDDB001C7E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6770E5F2123CDDB001C7E6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F6770E6A2123EE68001C7E6C /* notice.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = notice.md; sourceTree = "<group>"; };
+		F6770E6A2123EE68001C7E6C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6770E6B2124091C001C7E6C /* JLScreenCaptureUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLScreenCaptureUtil.h; sourceTree = "<group>"; };
 		F6770E6C2124091C001C7E6C /* JLScreenCaptureUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLScreenCaptureUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,7 +61,7 @@
 		F6770E442123CDDA001C7E6C = {
 			isa = PBXGroup;
 			children = (
-				F6770E6A2123EE68001C7E6C /* notice.md */,
+				F6770E6A2123EE68001C7E6C /* README.md */,
 				F6770E4F2123CDDA001C7E6C /* JLScreenShot */,
 				F6770E4E2123CDDA001C7E6C /* Products */,
 			);

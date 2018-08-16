@@ -14,7 +14,7 @@
 		F648EED92102FEA200045DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F648EED72102FEA200045DB8 /* LaunchScreen.storyboard */; };
 		F648EEDC2102FEA200045DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F648EEDB2102FEA200045DB8 /* main.m */; };
 		F648EEE52102FF4100045DB8 /* JLAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = F648EEE42102FF4100045DB8 /* JLAuthorization.m */; };
-		F66077DA212547F8000C3D4C /* notice.md in Resources */ = {isa = PBXBuildFile; fileRef = F66077D9212547F7000C3D4C /* notice.md */; };
+		F66077DA212547F8000C3D4C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F66077D9212547F7000C3D4C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		F648EEDB2102FEA200045DB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F648EEE32102FF4100045DB8 /* JLAuthorization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLAuthorization.h; sourceTree = "<group>"; };
 		F648EEE42102FF4100045DB8 /* JLAuthorization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLAuthorization.m; sourceTree = "<group>"; };
-		F66077D9212547F7000C3D4C /* notice.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = notice.md; sourceTree = "<group>"; };
+		F66077D9212547F7000C3D4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 		F648EEC02102FEA200045DB8 = {
 			isa = PBXGroup;
 			children = (
-				F66077D9212547F7000C3D4C /* notice.md */,
+				F66077D9212547F7000C3D4C /* README.md */,
 				F648EECB2102FEA200045DB8 /* JLCameraAuthorizationDemo */,
 				F648EECA2102FEA200045DB8 /* Products */,
 			);
@@ -155,7 +155,7 @@
 			files = (
 				F648EED92102FEA200045DB8 /* LaunchScreen.storyboard in Resources */,
 				F648EED62102FEA200045DB8 /* Assets.xcassets in Resources */,
-				F66077DA212547F8000C3D4C /* notice.md in Resources */,
+				F66077DA212547F8000C3D4C /* README.md in Resources */,
 				F648EED42102FEA200045DB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

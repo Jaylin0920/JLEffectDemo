@@ -1,4 +1,4 @@
-#### View截屏，方案对比
+## View截屏，方案对比
 
 ##### 方法一：renderInContext
 
@@ -27,7 +27,7 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 
 
-#### WebView长视图截屏，UIWebView和WKWebView对比
+## WebView长视图截屏，UIWebView和WKWebView对比
 
 
 
@@ -74,7 +74,7 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 
 
-#### Bug及解决
+## Bug及解决
 
 ##### 1、含有WKWebview的视图在截图时，图片可能为nil
 
@@ -114,7 +114,7 @@ value: 需要保存图片
 
 
 
-#### 参考文章链接
+## 参考文章链接
 
 [StackOvetflow - WKWebView Screenshots](https://stackoverflow.com/questions/24727499/wkwebview-screenshots)
 
@@ -128,7 +128,7 @@ value: 需要保存图片
 
 
 
-#### 推荐的开源项目
+## 推荐的开源项目
 
 [TYSnapshotScroll - 一句代码保存截图]( https://github.com/TonyReet/TYSnapshotScroll)
 
