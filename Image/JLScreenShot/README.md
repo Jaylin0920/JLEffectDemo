@@ -76,14 +76,14 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 ## Bug及解决
 
-##### 1、含有WKWebview的视图在截图时，图片可能为nil
+##### bug-1、含有WKWebview的视图在截图时，图片可能为nil
 
 截图使用的方法是 ` [view.layer renderInContext:context]; ` ，在截屏时可能拿不到wkwebview的内容，此时 `UIGraphicsGetCurrentContext()` 的返回结果是nil
 
 需使用 `[self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];`
 
 
-##### 2、iOS11之后，图片保存到相机会报错
+##### bug-2、iOS11之后，图片保存到相机会报错
 
 报错提示：
 
