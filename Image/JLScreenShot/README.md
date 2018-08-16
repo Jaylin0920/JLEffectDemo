@@ -1,3 +1,6 @@
+<center>截屏</center>
+
+
 ## View截屏，方案对比
 
 ##### 方法一：renderInContext

@@ -16,7 +16,7 @@ Net
 
 JLHole 坑
 
-❤️webview截图：uiwebview截图无问题，wkwebview截图，UIGraphicsGetCurrentContext()的返回结果是nil
+webview截图：uiwebview截图无问题，wkwebview截图，UIGraphicsGetCurrentContext()的返回结果是nil
 
 
 
@@ -24,7 +24,7 @@ JLHole 坑
 
 ### Image
 
-❤️（+）截屏：截取当前屏幕、view组合截屏         JLScreenShot - 截屏
+👌JLScreenShot - 截屏
 
 👌JLCameraAuthorization - 相机相册使用权限
 
@@ -40,6 +40,6 @@ JLHole 坑
 
 ### ScrollView
 
-（+）嵌套布局
+❤️嵌套布局
 
-联动布局
+❤️❤️联动布局

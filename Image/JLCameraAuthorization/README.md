@@ -13,7 +13,7 @@
 
 
 
-#### 权限API
+## 权限API
 
 相机权限
 
@@ -91,7 +91,7 @@ iOS11以下，不配置访问权限时，
 
 
 
-#### 参考文章链接
+## 参考文章链接
 
 [info.plist权限设置](https://blog.csdn.net/qq413191840/article/details/74171751)
 
@@ -101,6 +101,6 @@ iOS11以下，不配置访问权限时，
 
 
 
-#### 推荐的开源项目
+## 推荐的开源项目
 
 [ECAuthorizationTools - iOS隐私权限获取的封装工具类](https://blog.csdn.net/qq_30513483/article/details/74388625)
