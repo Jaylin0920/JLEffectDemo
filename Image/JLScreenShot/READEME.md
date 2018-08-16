@@ -1,8 +1,3 @@
-截图
-
-
-
-
 #### View截屏，方案对比
 
 ##### 方法一：renderInContext
