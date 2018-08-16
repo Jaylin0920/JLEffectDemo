@@ -24,12 +24,10 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 - WKWebView，可以拿到当前展示范围的截图 （此方法能够解决 wkwebview 截图 bug）
 
-
+<br>
 
 
 ## WebView长视图截屏，UIWebView和WKWebView对比
-
-
 
 ##### UIWebView
 
@@ -38,7 +36,6 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 - uiWebview.scrollView长视图截图，可以拿到整个网页内容。（UIWebView承载内容的其实是作为其子View的UIScrollView，所以对其scrollView进行截图即可）
 
 - 都有图像
-
 
 ##### WKWebview
 
@@ -63,7 +60,7 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 
 
-##### WKWebView 长视图截屏方案
+### WKWebView 长视图截屏方案
 
 暴力的渲染方式去合成一张大截图。
 
@@ -71,6 +68,7 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 ![image](http://blog.startry.com/img/blog_swvc_wkwebview.png)
 
+<br>
 
 
 
@@ -111,7 +109,7 @@ UIImageWriteToSavedPhotosAlbum(image, self, selector, (__bridge void *)self);
 key：Privacy - Photo Library Additions Usage Description
 value: 需要保存图片
 ```
-
+<br>
 
 
 ## 参考文章链接
@@ -126,6 +124,7 @@ value: 需要保存图片
 
 [我只是想要截个屏](http://blog.startry.com/2016/02/24/Screenshots-With-SwViewCapture/)
 
+<br>
 
 
 ## 推荐的开源项目
