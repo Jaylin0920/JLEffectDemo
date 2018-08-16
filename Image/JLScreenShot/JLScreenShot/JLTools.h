@@ -15,7 +15,6 @@
 #define TICK   NSDate *startTime = [NSDate date];
 #define TOCK   NSLog(@"Time: %f", -[startTime timeIntervalSinceNow]);
 
-
 @interface JLTools : NSObject
 
 // 保存图片到相册

@@ -12,7 +12,6 @@
 @property (nonatomic, strong) UIViewController *currentVC;
 @end
 
-
 @implementation JLTools
 
 #pragma mark - 保存到相册

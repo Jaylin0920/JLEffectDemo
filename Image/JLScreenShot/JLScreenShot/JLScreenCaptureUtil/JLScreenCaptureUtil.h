@@ -11,7 +11,7 @@
 #import <WebKit/WebKit.h>
 
 /**
- 截屏
+ 截屏工具
  */
 @interface JLScreenCaptureUtil : NSObject
 
@@ -22,13 +22,13 @@
 
 /**
  view截屏
- (该API仅可以在未使用layer和OpenGL渲染的视图上使用；包含导航栏的内容使用此方法)
+ (适用于未使用layer和OpenGL渲染的视图；包含navigationBar的内容使用此方法)
  */
 + (UIImage *)captureNormalView:(UIView *)view;
 
 /**
  view-OpenGL截屏
- (针对有用过OpenGL渲染过的视图截图；包含wkWebView的内容使用此方法)
+ (适用于使用过OpenGL渲染过的视图；包含wkWebView的内容使用此方法)
  */
 + (UIImage *)captureOpenGLView:(UIView *)view;
 
