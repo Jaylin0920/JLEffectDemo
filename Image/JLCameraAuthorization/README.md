@@ -1,17 +1,5 @@
 # 相机、相册访问权限
 
-####  info.plist设置
-
-```
-<!-- 相机 —> 
-<key>NSCameraUsageDescription</key>
-<string>App需要您的同意,才能访问相机</string>
-<!-- 相册 —> 
-<key>NSPhotoLibraryUsageDescription</key>
-<string>App需要您的同意,才能访问相册</string>
-```
-
-
 
 ## 权限API
 
@@ -40,10 +28,22 @@ typedef NS_ENUM(NSInteger, PHAuthorizationStatus) {
     PHAuthorizationStatusAuthorized, //已经授权  
 } PHOTOS_AVAILABLE_IOS_TVOS(8_0, 10_0);
 ```
+<br>
 
 
+#####  info.plist设置
 
-#### Alert文案内容
+```
+<!-- 相机 —> 
+<key>NSCameraUsageDescription</key>
+<string>App需要您的同意,才能访问相机</string>
+<!-- 相册 —> 
+<key>NSPhotoLibraryUsageDescription</key>
+<string>App需要您的同意,才能访问相册</string>
+```
+
+
+## Alert文案内容
 
 > Tips：文案内容注意符合规范，否则审核会被拒
 
@@ -66,18 +66,21 @@ App需要您的同意,才能访问相机 - jl此处文案可修改，但要符�
 需要获取您的相册信息
 不允许 vs 好
 ```
+<br>
 
 
 
-#### 相册访问权限变更
+## 相册访问权限说明
+
+
+##### 相册访问权限变更
 
 iOS11之前：无默认权限
 
 iOS11之后：默认开启访问相册权限（读权限），可直接跳转到相册。如想添加图片到相册（写权限），需用户授权。
 
 
-
-#### 相册访问权限效果
+##### 相册访问权限效果
 
 iOS11以下，不配置访问权限时，
 
@@ -89,6 +92,8 @@ iOS11以下，不配置访问权限时，
 
 锁定权限的提示内容“此应用没有权限访问您的照片或视频，您可以在“隐私设置”中启用访问”
 
+<br>
+
 
 
 ## 参考文章链接
@@ -99,8 +104,13 @@ iOS11以下，不配置访问权限时，
 
 [改变相册访问许可时 crash 问题](http://www.cocoachina.com/ios/20161129/18218.html)
 
+<br>
+
 
 
 ## 推荐的开源项目
 
 [ECAuthorizationTools - iOS隐私权限获取的封装工具类](https://blog.csdn.net/qq_30513483/article/details/74388625)
+
+<br>
+
