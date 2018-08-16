@@ -27,6 +27,7 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 <br>
 
 
+
 ## WebView长视图截屏，UIWebView和WKWebView对比
 
 ##### UIWebView
@@ -57,10 +58,11 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 - 如果有webview截图需求时，长内容截图wkwebview，还可能拿不到图像，如果是长内容截图，一定要选用UIWebView
 
+<br>
 
 
 
-### WKWebView 长视图截屏方案
+## WKWebView 长视图截屏方案
 
 暴力的渲染方式去合成一张大截图。
 
@@ -112,6 +114,7 @@ value: 需要保存图片
 <br>
 
 
+
 ## 参考文章链接
 
 [StackOvetflow - WKWebView Screenshots](https://stackoverflow.com/questions/24727499/wkwebview-screenshots)
@@ -125,6 +128,7 @@ value: 需要保存图片
 [我只是想要截个屏](http://blog.startry.com/2016/02/24/Screenshots-With-SwViewCapture/)
 
 <br>
+
 
 
 ## 推荐的开源项目
