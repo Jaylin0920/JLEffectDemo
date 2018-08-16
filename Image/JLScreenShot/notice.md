@@ -59,13 +59,19 @@ value: 需要保存图片
 
 #### 参考文章链接
 
+[StackOvetflow - WKWebView Screenshots](https://stackoverflow.com/questions/24727499/wkwebview-screenshots)
+
 [两种截屏方案的对比](https://blog.csdn.net/lizitao/article/details/74857890)
 
 [iOS 截图的那些事儿](https://www.jianshu.com/p/3327ffeb7fa5)
 
 [我只是想要截个屏](http://blog.startry.com/2016/02/24/Screenshots-With-SwViewCapture/)
 
-[TYSnapshotScroll]( https://github.com/TonyReet/TYSnapshotScroll)
 
-[StackOvetflow - WKWebView Screenshots](https://stackoverflow.com/questions/24727499/wkwebview-screenshots)
+
+#### 推荐的开源项目
+
+[TYSnapshotScroll - 一句代码保存截图]( https://github.com/TonyReet/TYSnapshotScroll)
+
+[SwViewCapture - iOS截图库（swift版本） ](https://github.com/startry/SwViewCapture)
 

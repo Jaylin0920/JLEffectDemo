@@ -95,8 +95,12 @@ iOS11以下，不配置访问权限时，
 
 [info.plist权限设置](https://blog.csdn.net/qq413191840/article/details/74171751)
 
-[ECAuthorizationTools（iOS隐私权限获取的封装工具类）](https://blog.csdn.net/qq_30513483/article/details/74388625)
-
 [iOS11相册权限变更](https://www.jianshu.com/p/c03a87e4ca87)
 
 [改变相册访问许可时 crash 问题](http://www.cocoachina.com/ios/20161129/18218.html)
+
+
+
+#### 推荐的开源项目
+
+[ECAuthorizationTools - iOS隐私权限获取的封装工具类](https://blog.csdn.net/qq_30513483/article/details/74388625)

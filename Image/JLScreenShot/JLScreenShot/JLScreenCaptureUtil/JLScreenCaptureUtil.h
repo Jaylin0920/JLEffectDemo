@@ -45,6 +45,6 @@
 /**
  wkWebView截屏
  */
-+ (UIImage *)captureWKWebView:(WKWebView *)wkWebview;
++ (void)captureWKWebView:(WKWebView *)wkWebview finishBlock:(void(^)(UIImage *snapShotImage))finishBlock;
 
 @end
