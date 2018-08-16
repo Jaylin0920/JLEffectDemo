@@ -48,17 +48,17 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 - 截屏处理时间长。（长视图截屏时采用了单屏截图，然后暴力渲染方式合成一张大截图。内容越长，递归操作的耗时越长，五六秒，甚至十几秒都可能）
 
-- 本项目的wkwebview的截图方法，如wkwebview只占用了部分屏幕，此方法会在wkwebview下层有视图闪现的问题。
+- 本项目的wkwebview的截图方法，如果wkwebview只占用了部分屏幕，此方法会在wkwebview下层有视图闪现的问题。
 
 ##### 总结
 
-- 加载webview时，考虑到网页加载速度和内存占用上 -> 推荐选用 WKWebview
+- 加载webview时，考虑到网页加载速度和内存占用上 —> 推荐选用 WKWebview
 
-- 如果有webview截图需求时， WKWebview截图采用了递归操作耗时长，内容越长耗时越多 -> 推荐选用 WKWebview
+- 如果有webview截图需求时，从耗时角度上考虑，WKWebview截图采用了递归操作耗时长，内容越长耗时越多， —> 推荐选用 WKWebview
 
-- 如果有webview截图需求时，网页内容很短 -> 使用UIWebView，WKWebview均可
+- 如果有webview截图需求时，网页内容很短 —> 使用UIWebView，WKWebview均可
 
-- 如果有webview截图需求时，网页内容过长，可能拿不到截图图像 -> 一定要选用UIWebView
+- 如果有webview截图需求时，网页内容过长，可能拿不到截图图像 —> 一定要选用UIWebView
 
 <br>
 
@@ -68,7 +68,7 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 暴力的渲染方式去合成一张大截图。
 
-[思路]：截取屏幕显示范围大小的视图，滚动，按页截图，滚动，按页截图，递归操作直到滚动到最后一页，最后将所有截取的图片合成为一张大图。
+（截取屏幕显示范围大小的视图，滚动，按页截图，滚动，按页截图，递归操作直到滚动到最后一页，最后将所有截取的图片合成为一张大图。）
 
 ![image](http://blog.startry.com/img/blog_swvc_wkwebview.png)
 
@@ -78,11 +78,14 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 ## Bug及解决
 
-##### bug-1、含有WKWebview的视图在截图时，图片可能为nil
+##### 1、含有WKWebview的视图在截图时，图片可能为nil
 
 截图使用的方法是 ` [view.layer renderInContext:context]; ` ，在截屏时可能拿不到wkwebview的内容，此时 `UIGraphicsGetCurrentContext()` 的返回结果是nil
 
-需使用 `[self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];`
+解决方案：
+```objective-c
+[self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
+```
 
 
 ##### bug-2、iOS11之后，图片保存到相机会报错
