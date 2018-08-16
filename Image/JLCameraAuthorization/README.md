@@ -3,7 +3,7 @@
 
 ## 权限配置
 
-#####  info.plist设置
+####  info.plist设置
 
 ```
 <!-- 相机 —> 
@@ -19,7 +19,7 @@
 
 ## 权限API
 
-#####  相机权限
+####  相机权限
 
 ```objective-c
 //相机、麦克风的授权状态
@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, AVAuthorizationStatus) {
 //AVMediaTypeAudio：麦克风权限
 ```
 
-#####  相机权限
+####  相机权限
 
 ```objective-c
 typedef NS_ENUM(NSInteger, PHAuthorizationStatus) {
@@ -52,7 +52,7 @@ typedef NS_ENUM(NSInteger, PHAuthorizationStatus) {
 
 > Tips：文案内容注意符合规范，否则审核会被拒
 
-##### 首次访问（未询问过用户是否授权）
+#### 首次访问（未询问过用户是否授权）
 
 alert为苹果系统控制。message可修改，title、buttonTitle不可修改
 
@@ -62,7 +62,7 @@ App需要您的同意,才能访问相机 - jl此处文案可修改，但要符�
 不允许 vs 好
 ```
 
-##### 非首次访问
+#### 非首次访问
 
 alert为APP端控制。title、message、buttonTitle均可修改
 
@@ -78,14 +78,14 @@ alert为APP端控制。title、message、buttonTitle均可修改
 ## 相册访问权限说明
 
 
-##### 相册访问权限变更
+#### 相册访问权限变更
 
 iOS11之前：无默认权限
 
 iOS11之后：默认开启访问相册权限（读权限），可直接跳转到相册。如想添加图片到相册（写权限），需用户授权。
 
 
-##### 相册访问权限效果
+#### 相册访问权限效果
 
 iOS11以下，不配置访问权限时，
 

@@ -3,7 +3,7 @@
 
 ## View截屏，方案对比
 
-##### 方法一：renderInContext
+#### 方法一：renderInContext
 
 - 该方法实际上是通过遍历UIView的layer tree进行渲染，但是它不支持动画的渲染，它的的性能会和layer tree的复杂度直接关联。
 
@@ -13,7 +13,7 @@
 
 - WKWebView使用此方法，拿不到当前显示内容的截图。（UIGraphicsGetCurrentContext()的返回结果是nil）
 
-##### 方法二：drawViewHierarchyInRect
+#### 方法二：drawViewHierarchyInRect
 
 - API是苹果基于UIView的扩展，与第一种方式不同，这种方式是直接获取当前屏幕的“快照”
 ```
@@ -33,7 +33,7 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 ## UIWebView、WKWebView的长视图截屏对比
 
-##### UIWebView
+#### UIWebView
 
 - 网页加载速度慢，占用内存过大。
 
@@ -41,7 +41,7 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 - 本项目中截图方法，都有图像。
 
-##### WKWebview
+#### WKWebview
 
 - 网页加载速度快，占用内存少。
 
@@ -53,7 +53,7 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 - 本项目的wkwebview的截图方法，如果wkwebview只占用了部分屏幕，此方法会在wkwebview下层有视图闪现的问题。
 
-##### 总结
+#### 总结
 
 - 加载webview时，考虑到网页加载速度和内存占用上 —> 推荐选用 WKWebview
 
@@ -81,14 +81,14 @@ Renders a snapshot of the complete view hierarchy as visible onscreen into the c
 
 ## Bug及解决
 
-##### 1、含有WKWebview的视图在截图时，图片可能为nil
+#### 1、含有WKWebview的视图在截图时，图片可能为nil
 
 截图使用的方法是 ` [view.layer renderInContext:context]; ` ，在截屏时可能拿不到wkwebview的内容，此时 `UIGraphicsGetCurrentContext()` 的返回结果是nil
 
 需使用 ` self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES]; `
 
 
-##### 2、iOS11之后，图片保存到相机会报错
+#### 2、iOS11之后，图片保存到相机会报错
 
 报错提示：
 
