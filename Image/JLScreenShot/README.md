@@ -1,4 +1,4 @@
-<center>截屏</center>
+# 截屏
 
 
 ## View截屏，方案对比
