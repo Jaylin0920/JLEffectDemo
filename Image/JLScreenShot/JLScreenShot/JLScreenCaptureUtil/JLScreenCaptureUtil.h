@@ -22,13 +22,13 @@
 
 /**
  view截屏
- (适用于未使用layer和OpenGL渲染的视图；包含navigationBar的内容使用此方法)
+ (适用于未使用layer和OpenGL渲染的视图；包含navigationBar的视图使用此方法)
  */
 + (UIImage *)captureNormalView:(UIView *)view;
 
 /**
  view-OpenGL截屏
- (适用于使用过OpenGL渲染过的视图；包含wkWebView的内容使用此方法)
+ (适用于使用过OpenGL渲染过的视图；包含wkWebView的视图使用此方法)
  */
 + (UIImage *)captureOpenGLView:(UIView *)view;
 
